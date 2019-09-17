@@ -1,0 +1,29 @@
+.json-2-table {
+  background-color: #fff;
+}
+
+.json-2-table-child {
+  margin-left: 50px;
+  width: calc(100% - 50px) !important;
+}
+
+.json-2-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+}
+
+.json-2-table tr:nth-child(2n) {
+  background-color: #eee;
+}
+
+.json-2-table td {
+  text-align: left;
+}
+
+.json-2-table td,
+.json-2-table th {
+  padding: 5px;
+  border: 1px solid #bebebe;
+}

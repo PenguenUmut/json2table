@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link type="text/css" rel="stylesheet" href="./Json2Table.css">
+    <script type="text/javascript" src="./Json2Table.js"></script>
+
+
+    <script>
+        let jsonData = { "status": 200, "success": true, "data": { "id": 3345, "hash": "96d3d0e0", "params": { "owner": "undefined", "adults": "1", "answers": "35,13,5,32,41", "city_id": 144, "children": "2", "companions": "", "coordinate": null, "arrival_date": "2019-09-23", "arrival_time": "09:00", "hotel_address": null, "departure_date": "2019-09-25", "departure_time": "19:00", "do_not_generate": 0, "adult_age_average": null, "children_age_average": null, "trip_answers": "5,13,32,35" }, "city": { "id": 144, "name": "Toronto", "featured": "https:\/\/poi-pics.s3-eu-west-1.amazonaws.com\/City\/144\/featured.jpg", "boundary": [43.48499, 43.86745, -79.56781, -79.17502], "coordinate": { "lat": 43.653226, "lng": -79.38318429999998 } }, "arrival_date": "2019-09-23", "arrival_time": "09:00", "departure_date": "2019-09-25", "departure_time": "19:00", "dailyplans": [{ "id": 22506, "hash": "96d3d0e0", "generate": 1, "date": "2019-09-23", "start_time": "09:00", "end_time": "23:00", "dailyplanpoi": [{ "id": 171095, "order": 0, "poi_id": 648281 }, { "id": 171096, "order": 1, "poi_id": 641715 }, { "id": 171097, "order": 2, "poi_id": 643985 }, { "id": 171098, "order": 3, "poi_id": 642228 }, { "id": 171099, "order": 4, "poi_id": 651808 }, { "id": 171100, "order": 5, "poi_id": 644024 }] }, { "id": 22507, "hash": "96d3d0e0", "generate": 1, "date": "2019-09-24", "start_time": "09:00", "end_time": "22:00", "dailyplanpoi": [{ "id": 171088, "order": 0, "poi_id": 647718 }, { "id": 171089, "order": 1, "poi_id": 645019 }, { "id": 171090, "order": 2, "poi_id": 651653 }, { "id": 171091, "order": 3, "poi_id": 643542 }, { "id": 171092, "order": 4, "poi_id": 646668 }, { "id": 171093, "order": 5, "poi_id": 642219 }] }, { "id": 22508, "hash": "96d3d0e0", "generate": 1, "date": "2019-09-25", "start_time": "09:00", "end_time": "19:00", "dailyplanpoi": [{ "id": 171082, "order": 0, "poi_id": 648165 }, { "id": 171083, "order": 1, "poi_id": 642945 }, { "id": 171084, "order": 2, "poi_id": 642388 }, { "id": 171085, "order": 3, "poi_id": 647244 }, { "id": 171086, "order": 4, "poi_id": 643636 }, { "id": 171087, "order": 5, "poi_id": 646894 }] }] }, "message": "Success" };
+        let testTable = Json2Table(jsonData);
+
+        function init() {
+            document.getElementById('test-table-content').innerHTML = testTable;
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="test-table-content"></div>
+</body>
+
+</html>
